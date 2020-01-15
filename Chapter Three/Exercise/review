@@ -1,0 +1,65 @@
+1.  a. int
+    b. float
+    c. char
+    d. char/int/short
+
+2. int为16位 long为32位，要使用32位时（32,64？）
+
+3. int32_t
+
+4.  a. char backspace
+    b. int
+    c. float
+    d. int
+    e. float
+
+5.  line1:  #include
+    line2:  int main(void)
+    line3:  {
+    line4:  float g,h;
+    line5:  no mistake
+    line6:  no mistake
+    line7:  g = 1e21;
+    line8:  rate has not been inited
+
+6.  int %d
+    unsigned int %#X
+    char %c
+    float %E
+    char %c
+    float %.1f
+    long %ld
+    float %e
+    float %a
+
+7.  unsigned int %o
+    long double %le
+    char %c
+    long %ld
+    char %c
+    float %.1f
+    unsigned int %x
+    int %d
+
+8.  d   ld
+    f   c
+
+9.  ch = '\n';      '\r'
+    ch = 10;        13
+    ch = 012;       15
+    ch = 0xA;       0xD
+
+10. int main(void) /*this program is perfict*/
+    {
+        int cows, legs;
+        printf("How many cow legs did you count?\n");
+        scanf("%d", &legs);
+        cows = legs/4;
+        printf("That implies there are %d cows.\n", cows);
+        return 0;
+    }
+
+11. new line
+    '\'
+    '"'
+    table

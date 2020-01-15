@@ -1,0 +1,42 @@
+1. function
+
+2. a = (a*b;   //grammer error
+
+3. a = a-b;    //a equal to a add b, semantic error;
+
+4. more than 10 mistake, 不适合写代码
+#include <stdio.h>
+
+int main(void)
+{
+    int s;
+    s = 52 ;
+    printf("There are %d weels in a year\n", s);
+
+    return 0;
+}
+
+5. 
+a. Baa Baa Black Sheep.Have you any wool?
+
+b. Begone!
+   O creature of lard!
+
+c. What?
+   No/fish?
+
+d. 2 + 2 = 4
+
+6. main、int、char
+
+7. printf("There are %d words and %d lines", words, lines);
+
+8. 
+after 7 line: a = 5, b = 2
+after 8 line: a = 5, b = 5
+after 9 line: a = 5, b = 5
+
+9.
+after 7 line: x = 10, y = 5
+after 8 line: x = 10, y = 15
+after 9 line: x = 150, y = 15
