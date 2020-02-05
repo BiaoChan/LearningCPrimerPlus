@@ -1,0 +1,60 @@
+1. 程序跳过体重输入，直接进行无关输出。原因是程序将空格分开的姓名的后半部分当作了体重。
+
+2.  a. He sold the painting for $234.50.
+    b. H)i
+    c. His Hamlet was funny without being vulgar.
+       has 42 characters.
+    d. Is 0.12e4 the same as 1201.00?
+
+3. printf("\"%s\"has %d characters.\n", Q, strlen(Q));
+
+4.  line 1: #define B "booboo"
+    line 2: #define X 10
+    line 3: int main(void)
+    line 6: char name[40];
+    line 9: printf("All right, %s, what's your age?\n", name);
+    line 10: scanf("%d", &age);
+    line 11: int xp = age + X;
+
+5. 
+printf("This copy of \"%s\" sells for $5.2f.\n"
+    "That is %2.0f%% of list.\n", BOOK, cost, percent);
+printf("This copy of \"%s\" sells for $5.2f.\n\
+That is %2.0f%% of list.\n", BOOK, cost, percent);
+
+6.  a.  %d
+    b.  %4X
+    c.  %10.3f
+    d.  %12.2e
+    e.  %-30s
+
+7.  a.  %15lu
+    b.  %4#x
+    c.  %-12.2E
+    d.  %+10.3f
+    e.  %8.8s
+
+8.  a.  %6.4d
+    b.  %*o
+    c.  %2c
+    d.  %+0.f
+    e.  %-7.5s
+
+9.  
+a.  int d;
+    scanf("%d", &d);
+b.  float f1, f2;
+    scanf("%f %E", &f1, &f2);
+c.  char name[40];
+    scanf("%s", name);
+d.  char s[40];
+    int d;
+    scanf("%s %d", s, &d);
+e.  int d;
+    scanf("%*s %d", &d);
+
+10. 空格，回车换行，制表符
+
+11. %zd
+
+12. 不可行，所有的圆括号都会被替换成花括号
