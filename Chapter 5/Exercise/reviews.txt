@@ -1,0 +1,94 @@
+1.  a.  x=30
+    b.  x=27
+    c.  x=y=1
+    d.  x=3, y=9
+
+2.  a.  x=6
+    b.  x=52
+    c.  x=0
+    d.  x=13
+
+3.  a.  37.5
+    b.  1.5
+    c.  35
+    d.  37
+    e.  37.5
+    f.  35
+
+4.
+#include <stdio.h>
+
+int main(void)
+{
+    int i=1;
+    float n;
+    printf("Watch out! Here come a bunch of fractions!\n");
+    while(i++<30)
+    {
+        n = 1.0/i;
+        printf(" %f\n", n);
+    }
+    printf("That's all, folks!\n");
+    
+    return 0;
+}
+
+5.  sec 初值不确定， 且输入0后并不会立即退出
+
+6.  
+%s! C is cool!
+! C is cool!
+11
+11
+12
+11
+
+7.  SOS:4 4.00
+
+8.  
+    1    2    3    4    5    6    7    8    9   10
+
+9.
+#include <stdio.h>
+#define START 'a'
+#define END 'g'
+
+int main(void)
+{
+    char c = START;
+
+    while(c++<END)
+    {
+        printf("%2c", c);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+10.
+a. 
+   1   2
+b.
+ 101 
+ 102
+ 103
+ 104
+c.
+stuvw
+
+11. 
+COMPUTER BYTES DOG
+COMPUTER BYTES DOG
+......
+NEVER END
+
+12. a.  x = x+10;
+    b.  x++;
+    c.  c = 2*(a+b);
+    d.  c = a + 2*b;
+
+13. a.  x--;
+    b.  m = n%k;
+    c.  p=q/(b-a);
+    d.  x = (a+b) / (c*d);
