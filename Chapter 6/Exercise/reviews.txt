@@ -1,0 +1,140 @@
+1.  2
+    7
+    70
+    64
+    8
+    2
+
+2.  
+ 36
+ 18
+  9
+  4
+  2
+  1
+  一直输出直到超出精度范围
+
+3.  x > 5
+    scanf("%lf", &x)==0
+    x == 5
+
+4.  scanf("%d", &x)==1
+    x!=5
+    x>=20
+
+5.
+#include <stdio.h>
+int main(void)
+{
+    int i, j, list[10]; //[]
+    for(i=0; i<10; i++) //
+    {
+        list[i] = 2*i + 3;
+        for(j=0; j<=i; j++) //
+            printf(" %d", list[j]);
+        printf("\n");
+    }   //
+
+    return 0;
+}
+
+6.
+#include <stdio.h>
+#define ROWS 4
+#define COLUMNS 8
+
+int main(void)
+{
+    int i, j;
+    for(i=0; i<ROWS; i++)
+    {
+        for(j=0; j<COLUMNS; j++)
+            printf("$");
+        printf("\n");
+    }
+    return 0;
+}
+
+7.
+a.
+Hi! Hi! Hi! Bye! Bye! Bye! Bye! Bye! 
+b.
+ACGM
+
+8.
+a. 
+Go west, youn
+b.
+Hp!xftu-!zpvo
+c.
+Go west, young
+d.
+$o west, youn
+
+9.
+31|32|33|30|31|32|33|
+***
+1
+5
+9
+13
+
+***
+2 6
+4 8
+8 10
+
+***
+======
+=====
+====
+===
+==
+
+
+10. a.  mint
+    b.  10
+    c.  double
+    d.  ii.
+
+11. 
+#include <stdio.h>
+#define SIZE 8
+int main(void)
+{
+    int by_twos[SIZE];
+    int index;
+    for(index=0; index<SIZE; index++)
+        by_twos[index] = 2*i + 2;
+    for(index=0; index<SIZE; index++)
+        printf("%d ", by_twos[index]);
+    printf("\n");
+
+    return 0;
+}
+
+12. 
+long function(/*parameter list*/)
+{
+    /* loop */
+    返回long类型的值
+}
+
+13. 
+long square(int x)
+{
+    return (long)x*x;
+}
+
+14.
+1: Hi!
+k = 1
+k is 1 in the loop
+Now k is 3
+k = 3
+k is 3 in the loop
+Now k is 5
+k = 5
+k is 5 in the loop
+Now k is 7
+K = 7
