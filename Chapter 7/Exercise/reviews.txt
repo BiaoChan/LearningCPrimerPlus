@@ -5,7 +5,7 @@
 2.  a.  number >= 90 && number < 100
     b.  ch != 'q' && ch != 'k'
     c.  number >= 1 && number <= 9 && number != 5
-    d.  number < 1 && number > 9
+    d.  number < 1 || number > 9
 
 3.  
     scanf("%d %d", & weight, height);//5
@@ -15,7 +15,7 @@
     b.  false
     c.  true
     d.  6
-    e.  5
+    e.  10
     f.  false
 
 5.  
@@ -55,6 +55,7 @@ You are 20. Here is a raise.
 You are 40. Here is a raise.
 You are 60. Here is a raise.
 You are 65. Here is your gold watch.
+never end..
 
 9.
 Step 1

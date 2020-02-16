@@ -10,7 +10,7 @@ int main(void)
     printf("Enter some text; enter # to quit.\n");
     while ((ch = getchar()) != '#')
     {
-        switch (ch)     //switch(toupper(ch))可以省略多重标签
+        switch (ch) //switch(toupper(ch))可以省略多重标签
         {
         case 'a':
         case 'A':
