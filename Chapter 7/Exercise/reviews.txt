@@ -1,0 +1,94 @@
+1.  a.  false
+    b.  true
+    c.  false
+
+2.  a.  number >= 90 && number < 100
+    b.  ch != 'q' && ch != 'k'
+    c.  number >= 1 && number <= 9 && number != 5
+    d.  number < 1 && number > 9
+
+3.  
+    scanf("%d %d", & weight, height);//5
+    give up
+
+4.  a.  true
+    b.  false
+    c.  true
+    d.  6
+    e.  5
+    f.  false
+
+5.  
+*#%*#%$#%*#%*#%$#%*#%*#%$#%*#%*#%
+
+6. 
+fat hat cat Oh no!
+hat cat Oh no!
+cat Oh no!
+
+7.
+#include <stdio.h>
+
+int main(void)
+{
+    char ch;
+    int lc = 0;
+    int uc = 0;
+    int oc = 0;
+
+    while((ch=getchar())!='#')
+    {
+        if(ch>='a' && ch<='z')
+            lc++
+        else if(ch>='A' && ch<='Z')
+            uc++;
+        else
+            oc++;
+    }
+    printf("%d lowercae, %d uppercase, %d other", lc, uc, oc);
+
+    return 0;
+}
+
+8.  
+You are 20. Here is a raise.
+You are 40. Here is a raise.
+You are 60. Here is a raise.
+You are 65. Here is your gold watch.
+
+9.
+Step 1
+Step 2
+Step 3
+Step 1
+Step 1
+Step 3
+Step 1
+Done
+
+10.
+#include <stdio.h>
+
+int main(void)
+{
+    char ch;
+
+    while((ch=getchar())!='#')
+    {
+        if(ch!='\n')
+        {
+            printf("Step 1\n");
+            if(ch!='c')
+            {
+                if(ch=='b')
+                    break;
+                if(ch!='h')
+                    printf("Step 2\n");
+                printf("Step 3\n");
+            }
+        }
+    }
+    printf("Done!\n");
+    
+    return 0;
+}
