@@ -12,7 +12,8 @@ int main(void)
     double salary, tex;
     printf("Please select your inform:\n"
            "1. single.\n2. householder.\n"
-           "3. married.\n4. divorced.\n");
+           "3. married.\n4. divorced.\n"
+           "5. exit.\n");
     while(scanf("%d", &kase))
     {
         switch (kase)
@@ -29,16 +30,22 @@ int main(void)
         case 4:
             tex_level = DIVORCED;
             break;
+        case 5:
         default:
-            printf("parameter error.\n");
+            printf("exit.\n");
             return 0;
         }
         printf("Enter your salary:");
         scanf("%lf", &salary);
         if(salary>tex_level)
-        {
-            tex = 
-        }
+            tex = tex_level * NORMAL_RATE + (salary-tex_level)*OVER_RATE;
+        else 
+            tex = salary * NORMAL_RATE;
+        printf("%.2f salary should be charge %.2f tex.\n", salary, tex);
+        printf("Please select your inform:\n"
+           "1. single.\n2. householder.\n"
+           "3. married.\n4. divorced.\n"
+           "5. exit.\n");
     }
     
     return 0;
