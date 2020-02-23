@@ -1,0 +1,22 @@
+1.  输出一个读取到的字符。否，putchar()需要一个参数，而getchar()不需要参数
+
+2.  a.  H
+    b.  bell
+    c.  line feed
+    d.  backspace
+
+3.  count < essay > essayct
+
+4.  None of this is an efficient command
+
+5.  end of file
+
+6.  
+a. 
+If you qu
+b.
+HJacrthjacrt
+
+7. 留给编译器开发者实现，在头文件中定义
+
+8. 缓冲中换行符等剩余字符会被错误读取
