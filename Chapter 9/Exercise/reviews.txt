@@ -1,0 +1,79 @@
+1.  实际参数是指传入函数的值，形式参数是函数的局部变量
+
+2.  a.  void donut(int num);
+    b.  int gear(int a, int b);
+    c.  int guess(void);
+    d.  void stuff_it(double a, double *p);
+
+3.  a.  char n_to_char(int n);
+    b.  int digit(double a, int b);
+    c.  double which(double *a, double *b);
+    d.  int random(void);
+
+4.  
+int sum(int a, int b)
+{
+    return a+b;
+}
+
+5.  
+double sum(double a, double b)
+{
+    return a+b;
+}
+
+6.  //接受xy还是xy的地址？
+void alter(int *x, int *y)
+{
+    int sum, diff;
+    sum = *x + *y;
+    diff = *x - *y;
+    *x = sum;
+    *y = diff;
+}
+
+7.  line1:  void salami(int num)
+    line3:  int count;
+    line4:  for (count=1; count<=num; count++)
+
+8.  
+int max(int a, int b, int c)
+{
+    int max;
+    max = a>b?a:b;
+    max = max>c?max:c;
+    return max;
+}
+
+9.  
+#include <stdio.h>
+void menu(void)
+{
+    printf("Please choose one of the following:\n");
+    printf("1) copy files       2) move files\n");
+    printf("3) remove files     4) quit\n");
+    printf("Enter the number of your choose:\n");
+}                        
+
+int getnum(void)
+{
+    int choose, status;
+    while((status=scanf("%d", &choose)) && (choose<1||choose>4))
+    {
+        printf("Please enter a number between 1 and 4.\n");
+    }
+    if(status)
+        return choose;
+    else
+        return 4;
+}
+
+int main(void)
+{
+    int func;
+    menu();
+    func = getnum();
+    printf("func: %d\n", func);
+    
+    return 0;
+}
