@@ -1,0 +1,52 @@
+1. 8 8
+   4 4
+   0 0
+   2 2
+
+2. 4
+
+3. ref的地址即为&ref[0], ref+1指向数组中ref的下一个元素, ++ref指向ref+1
+
+4. a. *ptr: 12, *(ptr+2):16
+   b. *ptr: 12, *(ptr+2):14
+
+5. a. **ptr: 12, **(ptr+1):16
+   b. **ptr: 12, **(ptr+1):14
+
+6. a. &grid[22][56]
+   b. &grid[22][0], *(grid+22)
+   c. (int *)gird, gird[0], &grid[0][0]
+
+7.  int digits[10];
+    float rates[6];
+    iny mat[3][5];
+    int *psa[20];
+    char (*pstr)[20];
+
+8.  int num[6] = {1, 2, 4, 8, 16, 32};
+    num[2]
+    int num[100] = {[99]=-1};
+    int num[100] = {[5] = 101, [11] = 101, 101, 101, [3]=101};
+
+9. 0-9
+
+10. a. Y
+    b. N
+    c. N
+    d. N 
+    e. Y
+    f. N 
+    g. N 
+    h. Y
+
+11. int mat[800][600];
+
+12. a. void func(double p[], int n);    func(trots, 20);
+       void func(int n, double p[n]);   func(20, trots);
+    b. void func(short clops[][30], int rows);  func(clops, 10);
+       void func(int rows, int cols, short clops[rows][cols]);  func(10, 30, clops);
+    c. void func(long shots[][10][15], int n);  func(shots, 5);
+       void func(int i, int j, int k, long shots[i][j][k]); func(5, 10, 15, shots);
+
+13. a. show((double []){8, 3, 9, 2}, 4);
+    b. show2((double [][3]){{8, 3, 9}, {5, 4, 1}}, 2);
