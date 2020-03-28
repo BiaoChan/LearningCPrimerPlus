@@ -1,27 +1,30 @@
 #include <stdio.h>
-#include <string.h>
 
-#define ANSWER "Grant"
-#define SIZE 40
-
+void del_space(char *str);
 char * s_gets(char *st, int n);
 
 int main(void)
 {
-    char try[SIZE];
-
-    puts("Who is buried in Grant's tomb?");
-    s_gets(try, SIZE);
-    while(strcmp(try, ANSWER)!=0)
+    char str[40];
+    while(s_gets(str, 39)!=NULL)
     {
-        puts("No, that's wrong. Try again.");
-        s_gets(try, SIZE);
+        del_space(str);
+        printf("after del spaces:\n%s\n", str);
     }
-    puts("That's right!");
-    
     return 0;
 }
 
+void del_space(char *str)
+{
+    char *ps = str;
+    while(*str)
+    {
+        if(*str!=' ')
+            *ps++ = *str;
+        str++;
+    }
+    *ps = '\0';
+}
 
 char * s_gets(char *st, int n)
 {

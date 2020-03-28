@@ -1,0 +1,163 @@
+1. 字符串没有结尾标志
+
+2. 
+See you at the snack bar.
+ee you at the snack bar.
+See you
+e you
+
+3.
+y
+my
+mmy
+ummy
+Yummy
+
+4.
+I read part of it all the way through.
+
+5.
+a. 
+Ho Ho Ho!!oH oH oH
+b. char *
+c. str
+d. *--pc 表示pc先递减，再解引用pc的值; --*pc表示解引用pc后再递减
+e. 
+Ho Ho Ho!!oH oH o
+f. 结尾，首地址
+g. 前一个while什么都不打印，后一个循环打印首地址之前的内容，永远不会停止（直到溢出之后可能会停止）
+h. 必须声明函数: char *pr(char *);
+
+6. sign 1Byte, '$' 4 Byte, 字符常量通常用int类型存储, "$" 2 Byte
+
+7. 
+How are ya, sweetie? How are ya, sweetie?
+Beat the clock.
+eat the clock.
+Beat the clock. Win a toy.
+Beat
+chat
+hat
+at
+t
+t
+at
+How are ya, sweetie?
+
+8.
+faavrhee
+*le*on*sm
+
+9.
+char * s_gets(char *st, int n)
+{
+    char *ret_val;
+
+    ret_val = fgets(st, n, stdin);
+    if(ret_val)
+    {
+        while(*ret_val!='\n' && *ret_val!='\0')
+            ret_val++;
+        if(*ret_val == '\n')
+            *ret_val = '\0';
+        else   
+            while(getchar()!='\n')
+                continue;
+        ret_val = st;
+    }
+    return ret_val;
+}
+
+10. 
+size_t strlen(const chat *str)
+{
+    size_t size = 0;
+    while(*(str+size))
+        size++;
+    return size;
+}
+
+11.
+char * s_gets(char *st, int n)
+{
+    char *ret_val, *find;
+
+    ret_val = fgets(st, n, stdin);
+    if(ret_val)
+    {
+        if((find=strchr(ret_val, '\n'))!=NULL)
+            *find = '\0';
+        else   
+            while(getcahr()!='\n')
+                continue;
+    }
+    return ret_val;
+}
+
+12. 
+char *find_space(char * st)
+{
+    while(*st&&*st!=' ')
+        st++;
+    if(*st)
+        return st;
+    else 
+        return NULL;
+}
+
+13.
+#include <stdio.h>
+#include <string.h>
+
+#define ANSWER "GRANT"
+#define SIZE 40
+
+char * s_gets(char *st, int n);
+void ToUpper(char *);
+
+int main(void)
+{
+    char try[SIZE];
+
+    puts("Who is buried in Grant's tomb?");
+    s_gets(try, SIZE);
+    ToUpper(try);
+    while(strcmp(try, ANSWER)!=0)
+    {
+        puts("No, that's wrong. Try again.");
+        s_gets(try, SIZE);
+        ToUpper(try);
+    }
+    puts("That's right!");
+    
+    return 0;
+}
+
+
+char * s_gets(char *st, int n)
+{
+    char *ret_val;
+    int i=0;
+
+    ret_val = fgets(st, n, stdin);
+    if(ret_val)
+    {
+        while(st[i]!='\n' && st[i]!='\0')
+            i++;
+        if(st[i]=='\n')
+            st[i] = '\0';
+        else
+            while(getchar()!='\n')
+                continue;
+    }
+    return ret_val;
+}
+
+void ToUpper(char *str)
+{
+    while(*str)  
+    {
+        *str = toupper(*str);
+        str++;
+    }
+}
