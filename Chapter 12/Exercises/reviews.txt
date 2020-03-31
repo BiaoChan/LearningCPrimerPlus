@@ -1,0 +1,30 @@
+1. auto自动存储类别, register寄存器存储类别, static静态无链接存储类别
+
+2. 静态无链接，静态外部链接，静态内部链接
+
+3. 多个文件：静态外部链接）
+   一个文件：静态无链接、静态内部链接
+
+4. 无链接
+
+5. 声明外部链接变量或函数
+
+6. 返回值都为int 数组的首地址，但是colloc会把数组中所有位置0
+
+7. 文件1中daisy对文件1中main()、petal()可见，对文件2中stem()、root()可见
+   文件1中main()函数的lily只对文件1中main()函数可见，petal()函数有误，lily错误的外部声明
+   文件2中lily对文件2中的stem()、root()可见，对文件1不可见
+   文件2中rose对文件2中函数root()可见，对stem()不可见
+   文件2中stem()函数中的rose只对stem()函数可见
+
+8. 
+color in main() is B
+color in first() is R
+color in main() is B
+color in second() is G
+color in main() is G
+
+9.
+a. 定义内部链接静态变量plink
+   定义函数value_ct, 其中arr参数表示的数组无法改变数组中的内容
+b. 无意义，value和n作为函数参数传递的只是值，改变它们的值并不会改变函数调用时使用的变量的值
