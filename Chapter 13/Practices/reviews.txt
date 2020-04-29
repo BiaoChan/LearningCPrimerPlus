@@ -1,0 +1,112 @@
+1. 
+#include <stdio.h>
+fp = fopen("gelatin", "w");
+fputs("Nanette eats gelatin.\n", fp);
+fclose(fp);
+
+2. 程序以文件为参数，打印文件中的数字字符
+
+3. 
+a. ch = getc(fp1);
+b. fprintf(fp2, "%c\n", ch);
+c. putc(ch, fp2);??
+d. fclose(fp1);
+
+4. rev_4.c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+
+    FILE *fp;
+    double sum = 0, cur;
+    int count = 0;
+    if(argc==2)
+    {
+        printf("Choose %s as input\n", argv[1]);
+        fp = fopen(argv[1], "r");
+        if(fp==NULL)
+        {
+            printf("%s open failed.\n", argv[1]);
+            exit(EXIT_FAILURE);
+        }
+    }
+    else
+    {
+        printf("Choose stdin as input\n");
+        fp = stdin;
+    }
+    while(fscanf(fp, "%lf", &cur)!=EOF)
+    {
+        sum+= cur;
+        count++;
+    }
+
+    if(count>0)
+        printf("the average of input float numbers is %.2f\n", sum/count);
+    else
+        printf("No valid data.\n");
+
+    if(fp!=stdin)
+        fclose(fp);
+
+    
+    return 0;
+}
+
+5. rev_5.c
+#include <stdio.h>
+#include <stdlib.h>
+
+int ch_in_line(char ch, char *line);
+
+int main(int argc, char *argv[])
+{
+    FILE *fp;
+    char line[500], ch;
+    if(argc!=3)
+    {
+        printf("usage: %s ch filename\n", argv[0]);
+        exit(EXIT_FAILURE);
+    }
+    if((fp=fopen(argv[2], "r"))==NULL)
+    {
+        printf("open file %s failed.\n", argv[2]);
+        exit(EXIT_FAILURE);
+    }
+
+    ch = argv[1];
+    while((fgets(line, 500, fp))!=NULL)
+    {
+        if(ch_in_line(ch, line))
+            fputs(line, stdout);
+    }
+
+    fclose(fp);
+    
+    return 0;
+}
+
+int ch_in_line(char ch, char *line)
+{
+    while(*line!='\0')
+    {
+        if(*line==ch)
+            return 1;
+        line++;
+    }
+}
+
+6. 文本文件是以字符为载体表示信息的文件，二进制文件则记录的二进制数据表示信息
+
+7. fprintf存储的是8238301十进制值的字符信息，fwrite则保存数据的二进制形式
+    putc()存储的是字符本身，fwrite()存储的是表示字符的二进制数据
+
+8. 在标准输出打印
+    打印到指定文件，指定文件为标准输出
+    打印到指定文件，指定文件为标准错误
+
+9. r+
+r+ 可以读写文件
+a+只能在结尾更新文件
+w+如果文件存在会把文件长度截为0
